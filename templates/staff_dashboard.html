@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/staff_dashboard.css'%}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="">SLMS - Staff</a>
+        <a class="logout-btn" href="{% url 'logout' %}">Logout</a>
+    </nav>
+    <h3 class="welcome-text">Welcome, <span style="color: black;">{{ request.user.username }}</span></h3>
+    <h5 class="card-title">Apply Leave</h5>
+    <p class="card-description">Submit a new leave request</p>
+    <a class="action-btn" href="{% url 'apply_leave' %}">Apply</a>
+    <h5 class="card-title">My Leave Status</h5>
+    <p class="card-description">View your leave requests</p>
+    <a class="action-btn" href="{% url 'my_leaves' %}">View</a>
+</body>
+
+</html>

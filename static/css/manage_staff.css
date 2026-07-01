@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fc;
+    padding: 40px;
+}
+
+
+.page-title {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+
+.add-btn {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.add-btn:hover {
+    background: #15803d;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    margin-bottom: 25px;
+}
+
+
+.table-header {
+    background: #2563eb;
+    color: #fff;
+}
+
+.staff-table th,
+.staff-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.staff-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.staff-table tr:hover {
+    background: #eef4ff;
+}
+
+
+.edit-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+
+.delete-btn {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #64748b;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.back-btn:hover {
+    background: #475569;
+}

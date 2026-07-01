@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Leave</title>
+    <link rel="stylesheet" href="{% static 'css/my_leave.css' %}">
+</head>
+
+<body>
+    <h1 class="page-title">My Leave Applications</h1>
+    <table class="leave-table" border="2px">
+        <tr class="table-header">
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+        {% for i in leaves %}
+        <tr class="table-row">
+            <td>{{i.leave_type}}</td>
+            <td>{{i.start_date}}</td>
+            <td>{{i.end_date}}</td>
+            <td>{{i.reason}}</td>
+            <td class="status">{{i.status}}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No Leave Applications Found</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="back-btn" href="{% url 'staff_dashboard' %}">Back to Dashboard</a>
+
+</body>
+
+</html>

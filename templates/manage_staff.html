@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staff</title>
+    <link rel="stylesheet" href="{% static 'css/manage_staff.css' %}">
+</head>
+
+<body>
+    <h2 class="page-title">Manage Staff</h2>
+    <a class="add-btn" href="{% url 'add_staff' %}">+ Add Staff</a>
+    <table class="staff-table" border="1px">
+        <tr class="table-header">
+            <th>Username</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in staff_list %}
+        <tr>
+            <td>{{ i.username }}</td>
+            <td>
+                <a class="edit-btn" href="{% url 'edit_staff' i.id %}">Edit</a>
+                <a class="delete-btn" href="{% url 'delete_staff' i.id %}"
+                    onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        <a class="back-btn" href="{% url 'admin_dashboard' %}">Back to Dashboard</a>
+</body>
+
+</html>

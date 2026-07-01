@@ -1,0 +1,80 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background: #f4f7fc;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Top Navigation Buttons */
+.nav-btn,
+.logout-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    margin: 10px 8px 30px 0;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-btn {
+    background: #2563eb;
+}
+
+.nav-btn:hover {
+    background: #1d4ed8;
+}
+
+.logout-btn {
+    background: #dc2626;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+/* Dashboard Sections */
+.card-title {
+    margin-top: 25px;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+}
+
+.card-description {
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+/* Action Button */
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #16a34a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: .3s;
+    margin-bottom: 20px;
+}
+
+.action-btn:hover {
+    background: #15803d;
+}

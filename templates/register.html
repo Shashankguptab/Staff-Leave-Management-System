@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+
+<body>
+    <h1>SLMS</h1>
+    <p>Employee Leave Management Tracker</p>
+    <form method="Post">
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="text" name="username" id="" required>
+        <label>Password</label>
+        <input type="password" name="password" id="" required>
+        <label>Role</label>
+        <select name="role" id="" required>
+            <option value="">-- Select Role --</option>
+            <option value="admin">Admin</option>
+            <option value="staff">Staff</option>
+        </select>
+        <p>Admin can manage staff and approve leave requests.</p>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account?<a href="{% url 'login' %}">Login</a></p>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+
+</html>

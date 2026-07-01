@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Form</title>
+    <link rel="stylesheet" href="{% static 'css/apply_leave.css' %}">
+</head>
+
+<body>
+    <h1 class="page-title">Apply Leave</h1>
+
+    <form method="Post" class="leave-form">
+        {% csrf_token %}
+        <label class="form-label">Leave Type:</label>
+        <select class="form-select" name="leave_type" required>
+            <option value="">Select</option>
+            <option value="Casual Leave">Casual Leave</option>
+            <option value="Sick Leave">Sick Leave</option>
+            <option value="Emergency Leave">Emergency Leave</option>
+        </select>
+        <label class="form-label">Start Date:</label>
+        <input class="form-input" type="date" name="start" required>
+        <label class="form-label">End Date:</label>
+        <input class="form-input" type="date" name="end" required>
+        <label class="form-label">Reason:</label>
+        <textarea class="form-textarea" name="reason" cols="30" rows="10" required></textarea>
+        <button class="submit-btn" type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>

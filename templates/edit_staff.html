@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Staff</title>
+    <link rel="stylesheet" href="{% static 'css/edit_staff.css' %}">
+</head>
+
+<body>
+    <h2 class="page-title">Edit Staff</h2>
+    <form method="Post" class="staff-form">
+        <label class="form-label">Username</label>
+        <input class="form-input" type="text" name="username" id="" value="{{ staff.username }}" required>
+        <label class="form-label">Password</label>
+        <input class="form-input" type="password" name="password" id=""
+            placeholder="Leave Blank to keep current Password">
+        <button class="submit-btn" type="submit">Update Staff</button>
+        <a class="back-btn" href="{% url 'manage_staff' %}">Back to Manage Staff</a>
+
+</body>
+
+</html>

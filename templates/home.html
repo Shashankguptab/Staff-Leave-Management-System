@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLMS Portal</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{% static 'videos/staffleave.mp4' %}" type="video/mp4">
+    </video>
+    <h1>SLMS</h1>
+    <p>Staff Leave Management System</p>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    <br><br><br><br>
+    <footer>
+        @ copyright 2026 - SLMS Portal || All Rights Reserved
+    </footer>
+</body>
+
+</html>
